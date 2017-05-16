@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Login | BestNote</title>
+        <meta name="description" content="Cloud-based Note-taking App" />
+        <meta name="keywords" content="note-taking, bestnote, note, cloud-based" />
+		<meta name="author" content="Dasheng Jonathan Zhang" />
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <!-- Bootstrap / jQuery / jQuery-UI -->
+        <link href="lib/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="lib/bootstrap-theme.css" rel="stylesheet" media="screen">
+        <link href="lib/jquery-ui.css" rel="stylesheet" media="screen">
+        <link href="lib/jquery-ui.structure.css" rel="stylesheet" media="screen">
+        <link href="lib/jquery-ui.theme.css" rel="stylesheet" media="screen">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <!-- Firebase -->
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
+        <!-- Custom -->
+        <link href="custom/login.css" rel="stylesheet" media="screen">
+        <!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <div class="content-wrapper row">
+                <div class="header-area col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-4"><h3 class="current" id="login-section-btn">Login</h3></div>
+                        <div class="col-xs-4 logo"><img src="img/ideaicon.png" class="img-responsive" /></div>
+                        <div class="col-xs-4"><h3 id="register-section-btn">Register</h3></div>
+                    </div>
+                </div>
+                <div class="content-area col-xs-12">
+                    <h3>BestNote</h3>
+                    <h4>Cloud-based Note-taking App</h4>
+                    <p>* Now Available Across Platforms (Web / Android)</p>
+                    <div class="form-wrapper">
+                        <form>
+                            <span class="input input-login register" style="display: none;">
+                                <input class="input-field input-field-login left-aligned-prep" type="text" id="input-name" />
+                                <label class="input-label input-label-login go-left" for="input-name">
+                                    <span class="input-label-content input-label-content-login" data-content="Your Name">Your Name</span>
+                                </label>
+                            </span>
+                            <span class="input input-login">
+                                <input class="input-field input-field-login right-aligned-prep" type="text" id="input-email" />
+                                <label class="input-label input-label-login go-right" for="input-email">
+                                    <span class="input-label-content input-label-content-login" data-content="Email">Email</span>
+                                </label>
+                            </span>
+                            <span class="input input-login show-enabled">
+                                <input class="input-field input-field-login left-aligned-prep" type="password" id="input-password" />
+                                <label class="input-label input-label-login go-left short" for="input-password">
+                                    <span class="input-label-content input-label-content-login" id="password-label" data-content="Password">Password</span>
+                                </label>
+                            </span>
+                            <span class="input input-login register" style="display: none;">
+                                <input class="input-field input-field-login right-aligned-prep" type="password" id="input-confirm" />
+                                <label class="input-label input-label-login go-right" for="input-confirm">
+                                    <span class="input-label-content input-label-content-login" data-content="Confirm Password">Confirm Password</span>
+                                </label>
+                            </span>
+                            <div class="form-btns">
+                                <div id="warning-label" style="display: none;"></div>
+                                <button class="btn btn-lg btn-primary login" id="forgot-btn">Forgot Password?</button>
+                                <button type="button" class="btn btn-lg btn-primary login" id="login-btn">Login</button>
+                                <button type="button" class="btn btn-lg btn-primary register" id="register-btn" style="display: none;">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-area col-xs-12"><p>Copyright © BestNote, 2016</p></div>
+            </div>
+        </div>
+        <!-- Firebase-->
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAKYlWLv9PF7UUqPmTmNZuvT2YdFIsMPfs",
+                authDomain: "bestnote-app.firebaseapp.com",
+                databaseURL: "https://bestnote-app.firebaseio.com",
+                storageBucket: "bestnote-app.appspot.com",
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
+        <!-- jQuery -->
+        <script src="lib/jquery-3.1.0.js"></script>
+        <script src="lib/jquery-ui.js"></script>
+        <!-- Bootstrap -->
+        <script src="lib/bootstrap.js"></script>
+        <!-- Custom -->
+        <script src="custom/login.js"></script>
+    </body>
+</html>

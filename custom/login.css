@@ -1,0 +1,271 @@
+body {
+    background-color: rgb(50, 166, 216);
+    font-family: 'Indie Flower', cursive;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    text-align: center;
+    margin: 10% auto;
+    background-color: white;
+    border: 2px solid #d9edf7;
+    border-radius: 5px;
+}
+
+.header-area h3 {
+    position: relative;
+    bottom: -25px;
+    padding: 14.5px 0;
+    margin: 0 5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #EEE;
+    color: #647e94;
+    box-shadow: inset 0px -2px 3px 0px #ccc;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .header-area h3 {
+        font-size: 1.4em;
+        bottom: -30px;
+    }
+}
+
+.header-area h3.current{
+    background-color: #FFF;
+    color: #286090;
+    box-shadow: none;
+}
+
+.header-area {
+    background-color: #286090;
+    color: white;
+}
+
+.content-area {
+    padding: 15px;
+}
+
+.footer-area {
+    padding: 5px;
+    background-color: #286090;
+    color: white;
+    box-shadow: 0px -2px 2px #c7e4f3;
+}
+
+.footer-area p {
+    margin: 5px 0;
+}
+
+.logo img {
+    max-height: 80px;
+    margin: auto;
+}
+
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin: 1em;
+	max-width: 350px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+
+.input-field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-weight: 400;
+	font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input-field:focus {
+	outline: none;
+}
+
+.input-label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #696969;
+	font-weight: bold;
+    /* font-size: 70.25%; */
+    font-size: 17px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input-label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+    bottom: 6px;
+}
+
+.input-field-login {
+	width: 100%;
+    background-color: #EEE;
+	border: 2px solid transparent;
+    -o-transition: background-color 0.25s, border-color 0.25s;
+    -ms-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+	-webkit-transition: background-color 0.25s, border-color 0.25s;
+	transition: background-color 0.25s, border-color 0.25s;
+}
+
+.input-label-login {
+	width: 100%;
+	text-align: left;
+	position: absolute;
+	bottom: 100%;
+	pointer-events: none;
+	overflow: hidden;
+	padding: 0 1.25em;
+    -o-transform: translate3d(0, 3em, 0);
+    -ms-transform: translate3d(0, 3em, 0);
+    -moz-transform: translate3d(0, 3em, 0);
+	-webkit-transform: translate3d(0, 3em, 0);
+	transform: translate3d(0, 3em, 0);
+    -o-transition: -o-transform 0.25s;
+    -ms-transition: -ms-transform 0.25s;
+    -moz-transition: -moz-transform 0.25s;
+	-webkit-transition: -webkit-transform 0.25s;
+	transition: transform 0.25s, right 0.5s, width 0.5s;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+
+.input-label-content-login {
+	color: #8B8C8B;
+	padding: 0.25em 0;
+	-o-transition: -o-transform 0.25s;
+    -ms-transition: -ms-transform 0.25s;
+    -moz-transition: -moz-transform 0.25s;
+    -webkit-transition: -webkit-transform 0.25s;
+	transition: transform 0.25s;
+	-o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+
+.input-label-content-login::after {
+	content: attr(data-content);
+	position: absolute;
+	font-weight: 800;
+	bottom: 100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	color: #286090;
+	padding: 0.25em 0;
+    margin-bottom: -15px;
+	/* text-transform: uppercase; */
+	letter-spacing: 1px;
+	font-size: 0.85em;
+}
+
+.input-field-login:focus + .input-label-login,
+.input-filled .input-label-login {
+	-o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.input-field-login:focus + .input-label-login .input-label-content-login,
+.input-filled .input-label-content-login {
+    -o-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+
+.input-field-login:focus + .input-field-login,
+.input-filled .input-field-login {
+	background-color: transparent;
+	border-color: #286090;
+}
+
+form button.btn:hover {
+    background: #286090;
+    color: white;
+    border-color: #286090;
+}
+
+form button.btn {
+    background: white;
+    padding: 7px 16px;
+    color: #286090;
+    border: 2px solid #286090;
+    border-radius: 0;
+    margin-top: 10px;
+}
+
+#input-password, #password-label {
+    text-align: right;
+}
+
+input.right-aligned {
+    text-align: right !important;
+}
+
+input.left-aligned {
+    text-align: left !important;
+}
+
+label.go-right {
+    right: 0;
+}
+
+.form-btns {
+    min-height: 60px;
+}
+
+#forgot-btn {
+    position: absolute;
+    left: 1.8em;
+}
+
+#login-btn, #register-btn {
+    position: absolute;
+    right: 1.8em;
+}
+
+#warning-label {
+    position: absolute;
+    color: white;
+    z-index: 100;
+    background-color: #d9534f;
+    padding: .6em;
+    font-size: 1.3em;
+    right: 1.7em;
+    margin-top: 8px;
+}
