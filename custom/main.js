@@ -118,7 +118,7 @@ $(function(){
                                         temp.find('.note-item-title').html(value);
                                         setRandomBlue(temp.find('.note-item-title'));
                                         break;
-                                    case 'time_created':
+                                    case 'timeCreated':
                                         time = value;
                                         temp.find('.note-item-time').html(moment(parseInt(value, 10)).format('llll'));
                                         break;
@@ -126,7 +126,7 @@ $(function(){
                                         value = value.replace(/(?:\r\n|\r|\n)/g, '<br />');
                                         temp.find('.note-item-note').append(value);
                                         break;
-                                    case 'imageurl':
+                                    case 'imageUrl':
                                         if (value != "") {
                                             temp.append('<a class="light-box-link" href="' + value + '"><div class="note-item-image"></div></a>');
                                             temp.find('.note-item-image').css('background-image', 'url("' + value + '")');
@@ -166,13 +166,13 @@ $(function(){
                                         title = value;
                                         temp.find('.image-item-title').html(value);
                                         break;
-                                    case 'imageurl':
+                                    case 'imageUrl':
                                         if (value != "") {
                                             temp.attr('href', value);
                                             temp.find('img').attr('src', value);
                                         }
                                         break;
-                                    case 'time_created':
+                                    case 'timeCreated':
                                         time = moment(parseInt(value, 10)).format('ll');
                                         break;
                                     default:
@@ -303,24 +303,24 @@ $(function(){
         }
     }
 
-    function saveToNote(title, note, time, imageurl, uid, key, updates) {
+    function saveToNote(title, note, time, imageUrl, uid, key, updates) {
         var noteData = {
             title: title,
             note: note,
-            time_created: time,
-            time_lastupdated: time,
-            imageurl: imageurl,
+            timeCreated: time,
+            timeLastUpdated: time,
+            imageUrl: imageUrl,
             uid: uid
         };
         updates['/notes/' + key] = noteData;
     }
 
-    function saveToGallery(title, imageurl, time, uid, key, updates) {
+    function saveToGallery(title, imageUrl, time, uid, key, updates) {
         var picData = {
             title: title,
-            imageurl: imageurl,
-            time_created: time,
-            time_lastupdated: time,
+            imageUrl: imageUrl,
+            timeCreated: time,
+            timeLastUpdated: time,
             uid: uid
         };
         updates['/gallery/' + key] = picData;
